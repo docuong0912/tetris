@@ -1,0 +1,12 @@
+body{
+	background-image: url("../assets/bg/bg.jpg");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+canvas{
+	background-color: black;
+}

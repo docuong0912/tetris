@@ -2,12 +2,29 @@
 <html lang="en">
 <head>
 	<title>TETRIS</title>
+	<link rel="stylesheet" type="text/css" href="style/background.css">
+	<link rel="stylesheet" type="text/css" href="style/ultilities.css">
+	<link rel="stylesheet" type="text/css" href="style/main.css">
 </head>
 <body>
+	<div>
+		<img id="logo" src="assets/logo.png" alt="logo">
+	</div>
 	<canvas id="canvas"></canvas>
+	<div>
+		<div class="score-board">
+			<b>SCORE</b>
+			<div class="score-bg">
+				<p id="score"></p>
+			</div>
+			
+		</div>
+	</div>
 </body>
+
 <script src="js/Component/Tile.js"></script>
 <script src="js/Component/Shape.js"></script>
 <script src="js/GameMap.js"></script>
+<script src="js/UI.js"></script>
 
 </html>

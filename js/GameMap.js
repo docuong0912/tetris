@@ -8,7 +8,7 @@ var shape;
 var map = [...Array(41)].map(()=>new Array(10));
 var fall = true;
 var speed ;
-
+var score = 0;
 function init(){
 	shape = new Shape(context,40,0,Math.floor(Math.random()*7));
 	for(let i=0;i<map.length;i++){
@@ -52,6 +52,7 @@ function updateMap(){
 function checkMap(){
 	for(let i = 0;i<map.length;i++){
 		if(map[i].every(tile=>tile==1)){
+			score+=10*(i+1);
 			for(let j=0;j<map[i].length;j++){
 				map[i][j]=0;
 			}
@@ -63,7 +64,7 @@ function checkMap(){
 			}
 		}
 	}
-
+	scoreNode.textContent = score;
 }
 function isFreeHor(direction) {
    let temp = [];
@@ -195,7 +196,7 @@ const update = setInterval(()=>{
 	shape.update();
 	updateMap();
 	drawMap();
-},20);
+},200);
 
 
 
